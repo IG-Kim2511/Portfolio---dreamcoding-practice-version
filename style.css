@@ -1,0 +1,50 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* size */
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /* fontSize */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto;
+}
+ul {
+  list-style: none;
+}
+/* 
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+ */
+button {
+  border: thick double blue;
+  cursor: grab;
+  outline: dashed red;
+}
+button:focus {
+  border: thick double red;
+  cursor: grab;
+  outline: dashed orange;
+}
+/* header */
