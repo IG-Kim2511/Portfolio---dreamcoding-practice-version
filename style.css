@@ -43,12 +43,15 @@ button {
   outline: dashed red;
 }
 button:focus {
-  border: thick double red;
+  border: thick double green;
   cursor: grab;
   outline: dashed orange;
 }
 /* header */
 
 .navbar__logo img {
-  width: 1.3%;
+  width: 16px;
+}
+#home .home__avatar {
+  width: 15%;
 }
