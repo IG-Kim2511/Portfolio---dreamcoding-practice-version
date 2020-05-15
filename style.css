@@ -48,3 +48,7 @@ button:focus {
   outline: dashed orange;
 }
 /* header */
+
+.navbar__logo img {
+  width: 1.3%;
+}
