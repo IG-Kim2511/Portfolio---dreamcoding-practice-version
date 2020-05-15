@@ -55,3 +55,7 @@ button:focus {
 #home .home__avatar {
   width: 15%;
 }
+
+.job .job__logo {
+  width: 32px;
+}
