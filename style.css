@@ -27,6 +27,12 @@
 
   --color-orange: #feb546;
 
+  --color-strong-orange: #dc2f02;
+
+  --color-mint: #2ec4b6;
+
+  --color-light-mint: #cbf3f0;
+
   --color-black: #000000;
 
   /* Font size */
@@ -144,7 +150,7 @@ p {
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
 }
-/*???*/
+/*??? 왜인지 이거 적용하면, navbar제외한 모든 css가 먹통이 됨*/
 /* .navbar__menu__item:hover {
   background-color: var(--color-dark-pink); */
 
@@ -154,9 +160,6 @@ p {
 }
 
 /* home*/
-/*??? 왜인지 적용이 안됨 /  
-.navbar__menu__item:hover {  background-color: var(--color-dark-pink);
-를 지우면 적용이 됨*/
 #home {
   padding: 40px;
   /* 가운데 정렬 */
@@ -189,7 +192,14 @@ p {
 .section {
   padding: 50px;
   text-align: center;
+
+  margin: auto;
+}
+
+.section__container {
+  /* 특정 너비에서 줄바꿈 되게 max-width 설정 */
   max-width: 1200px;
+  /* 가운데 정렬 */
   margin: auto;
 }
 
@@ -252,4 +262,51 @@ p {
 }
 .job--period {
   font-size: var(--font-micro);
+}
+/* Skill */
+#skills {
+  background-color: var(--color-yellow);
+}
+.skillset {
+  display: flex;
+  background-color: var(--color-light-white);
+  margin: 20px 0;
+}
+/* 총너비에 margin없이 100%임. 각 div너비가 작은것이니 각 div에 flex-basis넣음 */
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-orange);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value {
+  /* width(기술숙련도)는 html에 코딩해서 JS로 동적으로 가져와야함.  */
+  height: 3px;
+  background-color: var(--color-strong-orange);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+.tools {
+  background-color: var(--color-dark-white);
+}
+.tools,
+.etc {
+  padding: 20px;
 }
