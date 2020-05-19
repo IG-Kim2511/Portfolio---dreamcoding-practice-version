@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" href="img/favicon-giggle.png" />
+    <link rel="icon" href="img/favicon-smile.ico" />
 
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
@@ -38,6 +38,14 @@
           <li class="navbar__menu__item">Contact</li>
         </ul>
       </div>
+<!-- Toggle button -->
+<button class="navbar__toggle-btn">
+  <i class="fas fa-bars"></i>
+</button>
+
+
+
+
     </nav>
     <!-- Home -->
     <section id="home">
@@ -53,73 +61,74 @@
       </h1>
       <h2 class="home__description">
         A junior web developer currently residing in North Carolina.
-        <br>
+        <br />
         (Permanent resident)
       </h2>
       <button class="home__contact">Contact me</button>
     </section>
     <!-- About -->
     <section id="about" class="section">
-      <h1>About me</h1>
-      <p>
-        I'm a self-taught front-end web developer.
-      </p>
-      <div class="about__majors">
-        <div class="major">
-          <div class="major__icon"><i class="fab fa-html5"></i></div>
-          <h2 class="major__title">HTML</h2>
-          <div class="major__description">
-            Lorem ipsumid <br />
-            enim.
+      <div class="section__container">
+        <h1>About me</h1>
+        <p>
+          I'm a self-taught front-end web developer.
+        </p>
+        <div class="about__majors">
+          <div class="major">
+            <div class="major__icon"><i class="fab fa-html5"></i></div>
+            <h2 class="major__title">HTML</h2>
+            <div class="major__description">
+              Lorem ipsumid <br />
+              enim.
+            </div>
           </div>
-        </div>
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-css3-alt"></i>
+          <div class="major">
+            <div class="major__icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h2 class="major__title">CSS</h2>
+            <div class="major__description">
+              Lorem ipsumid <br />
+              enim.
+            </div>
           </div>
-          <h2 class="major__title">CSS</h2>
-          <div class="major__description">
-            Lorem ipsumid <br />
-            enim.
-          </div>
-        </div>
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-js-square"></i>
-          </div>
-          <h2 class="major__title">Javascript</h2>
-          <div class="major__description">
-            Lorem ipsumid <br />
-            enim.
-          </div>
-        </div>
-      </div>
-      <div class="about__jobs">
-        <div class="job">
-          <img class="job__logo" src="img/favicon-giggle.png" alt="" />
-
-          <div class="job__description">
-            <p class="job__name">
-              samsung web dev Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Maiores vero porro quo possimus ab? Maxime
-              excepturi,
-            </p>
-            <p class="job--period">2011 sep-2018</p>
-          </div>
+          <div class="major">
+            <div class="major__icon">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h2 class="major__title">Javascript</h2>
+            <div class="major__description">
+              Lorem ipsumid <br />
+              enim.
+            </div>
           </div>
         </div>
 
-        <div class="job">
-          <img class="job__logo" src="img/favicon-giggle.png" alt="" />
+        <div class="about__jobs">
+          <div class="job">
+            <img class="job__logo" src="img/favicon-giggle.png" alt="" />
 
-          <div class="job__description">
-          <p class="job__name">
-            LG web dev Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Maiores vero porro quo possimus ab? Maxime excepturi,
-          </p>
-          <p class="job--period">2018- until now</p>
-        </div>
-        </div>
+            <div class="job__description">
+              <p class="job__name">
+                samsung web dev Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Maiores vero porro quo possimus ab? Maxime
+                excepturi,
+              </p>
+              <p class="job--period">2011 sep-2018</p>
+            </div>
+          </div>
+
+          <div class="job">
+            <img class="job__logo" src="img/favicon-giggle.png" alt="" />
+
+            <div class="job__description">
+              <p class="job__name">
+                LG web dev Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit. Maiores vero porro quo possimus ab? Maxime excepturi,
+              </p>
+              <p class="job--period">2018- until now</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -134,176 +143,201 @@
 </section>
      -->
     <section id="skills" class="section">
-
-      <div class="section__container">  
-
-
-      <h1>Skills</h1>
-      <h2>Skills & Attributes</h2>
-      <p>
-      Passion for learning new technologies. <br />
-        Capable of working within a team environment and independently.
-        <br />Ability to plan and time schedule, work under strict time pressure
-        and adapt quickly when needed.
-      </p>
-      <div class="skillset">
-        <div class="skillset__left">
-          <h3 class="skillset__title">Skills</h3>
-          <div class="skill">
-            <div class="skill__description">
-              <span>HTML</span>
-              <span>90%</span>
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+          Passion for learning new technologies. <br />
+          Capable of working within a team environment and independently.
+          <br />Ability to plan and time schedule, work under strict time
+          pressure and adapt quickly when needed.
+        </p>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="Skill__bar">
+                <!-- width(기술숙련도)는 html에 코딩해서 JS로 동적으로 가져와야함.   -->
+                <div class="skill__value" style="width: 90%;"></div>
+              </div>
             </div>
-            <div class="Skill__bar">
-              <!-- width(기술숙련도)는 html에 코딩해서 JS로 동적으로 가져와야함.   -->
-              <div class="skill__value"  style="width: 90%;"></div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>CSS</span>
+                <span>80%</span>
+              </div>
+              <div class="Skill__bar">
+                <div class="skill__value" style="width: 80%;"></div>
+              </div>
             </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>CSS</span>
-              <span>80%</span>
-            </div>
-            <div class="Skill__bar">
-              <div class="skill__value" style="width: 80%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>Javascript</span>
-              <span>50%</span>
-            </div>
-            <div class="Skill__bar">
-              <div class="skill__value" style="width: 50%;"></div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Javascript</span>
+                <span>50%</span>
+              </div>
+              <div class="Skill__bar">
+                <div class="skill__value" style="width: 50%;"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="skillset__right">
-          <div class="tools">
-            <h3 class="skillset__title">Tools</h3>
-            <ul>
-              <li><span>Visual Studio Code</span></li>
-              <li><span>Intellij</span></li>
-              <li><span>Android</span></li>
-              <li><span>ios</span></li>
-              <li><span>sketch app</span></li>
-            </ul>
-          </div>
-          <div class="etc">
-            <h3 class="skillset__title">Etc</h3>
-            <ul class="etc__list">
-              <li><span>Git</span></li>
-              <li><span>Scrum master</span></li>
-              <li><span>Math</span></li>
-            </ul>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul>
+                <li><span>Visual Studio Code</span></li>
+                <li><span>Intellij</span></li>
+                <li><span>Android</span></li>
+                <li><span>ios</span></li>
+                <li><span>sketch app</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">Etc</h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+                <li><span>Scrum master</span></li>
+                <li><span>Math</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
     <!-- work -->
     <section id="work" class="section">
-      <h1>My work</h1>
-      <h3>Projects</h3>
-      <div class="work__categories">
-        <button class="category__btn active">
-          All
-          <span class="category__count">
-            8
-          </span>
-        </button>
-        <button class="category__btn">
-          Front_end
-          <span class="category__count">
-            3
-          </span>
-        </button>
-        <button class="category__btn">
-          Back_end
-          <span class="category__count">
-            3
-          </span>
-        </button>
-        <button class="category__btn">
-          Mobile
-          <span class="category__count">
-            2
-          </span>
-        </button>
-      </div>
-      <div class="work__projects">
-        <a href="https://github.com/IanKim2511" class="project"  target="_blank">
-          <img src="img/projects/iu (1).jpg" alt="" class="project__img" >
-          <div class="project__description">
-            <h3>my project list</h3>
-            <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
-        <a href="https://github.com/IanKim2511"  class="project" target="_blank">
-          <img src="img/projects/iu (2).jpg" alt="" class="project__img" >
-          <div class="project__description">
-            <h3>my project list</h3>
-            <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
-        <a href="https://github.com/IanKim2511"  class="project" target="_blank">
-          <img src="img/projects/iu (3).jpg" alt="" class="project__img" >
-          <div class="project__description">
-            <h3>my project list</h3>
-            <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
-        <a href="https://github.com/IanKim2511" class="project"  target="_blank">
-          <img src="img/projects/iu (4).jpg" alt="" class="project__img" >
-          <div class="project__description">
-            <h3>my project list</h3>
-            <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
-        <a href="https://github.com/IanKim2511"  class="project" target="_blank">
-          <img src="img/projects/iu (5).jpg" alt="" class="project__img" >
-          <div class="project__description">
-            <h3>my project list</h3>
-            <span>Clone coding with HTML and CSS</span>
-          </div>
-        </a>
+      <div class="section__container">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+          <button class="category__btn active">
+            All
+            <span class="category__count">
+              8
+            </span>
+          </button>
+          <button class="category__btn">
+            Front_end
+            <span class="category__count">
+              3
+            </span>
+          </button>
+          <button class="category__btn">
+            Back_end
+            <span class="category__count">
+              3
+            </span>
+          </button>
+          <button class="category__btn">
+            Mobile
+            <span class="category__count">
+              2
+            </span>
+          </button>
+        </div>
+        <div class="work__projects">
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+          >
+            <img src="img/projects/iu (1).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+          >
+            <img src="img/projects/iu (2).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+          >
+            <img src="img/projects/iu (3).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+          >
+            <img src="img/projects/iu (4).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+          >
+            <img src="img/projects/iu (5).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
+
     <!-- testimonials -->
     <section id="testimonials" class="section">
-      <h1>testimonials</h1>
-      <h3>See waht they say about me</h3>
-      <div class="testimonials">
-        <div class="testimonial">
-          <img src="img/testimonial/iu (9).jpg" alt="testimonial" class="testimonial__avatar">
-          <div class="testimonial__speech-bubble">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-              distinctio ea dignissimos, quasi officiis autem consequuntur et
-              modi assumenda, beatae fuga sed quae omnis, voluptates facere qui.
-              Doloribus, asperiores magnam.
-            </p>
-            <p class="name"><a href="http://www.github.com">IU</a></p>
+      <div class="section__container">
+        <h1>testimonials</h1>
+        <h3>See waht they say about me</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="img/testimonial/iu (9).jpg"
+              alt="testimonial"
+              class="testimonial__avatar"
+            />
+            <div class="testimonial__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                distinctio ea dignissimos, quasi officiis autem consequuntur et
+                modi assumenda, beatae fuga sed quae omnis, voluptates facere
+                qui. Doloribus, asperiores magnam.
+              </p>
+              <p class="name"><a href="http://www.github.com">IU</a></p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                distinctio ea dignissimos, quasi officiis autem consequuntur et
+                modi assumenda, beatae fuga sed quae omnis, voluptates facere
+                qui. Doloribus, asperiores magnam.
+              </p>
+              <p class="name"><a href="http://www.github.com">IU</a></p>
+            </div>
+            <img
+              src="img/testimonial/iu (9).jpg"
+              alt="testimonial"
+              class="testimonial__avatar"
+            />
           </div>
         </div>
-
-
-        <div class="testimonial">
-          
-          <div class="testimonial__speech-bubble">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-              distinctio ea dignissimos, quasi officiis autem consequuntur et
-              modi assumenda, beatae fuga sed quae omnis, voluptates facere qui.
-              Doloribus, asperiores magnam.
-            </p>
-            <p class="name"><a href="http://www.github.com">IU</a></p>
-          </div>
-          <img src="img/testimonial/iu (9).jpg" alt="testimonial" class="testimonial__avatar">
-        </div>
-
-
-
       </div>
     </section>
     <!-- contact -->

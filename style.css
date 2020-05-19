@@ -59,8 +59,11 @@
   --size-border-radius: 4px;
 
   /* Animation */
-  /* 300ms가 가장 대중적임 */
+  /* 300ms가 가장 대중적임*/
   --animation_duration: 300ms;
+
+  /* 연습을 위해...1초로 설정 */
+  --animation_1s_duration: 1s;
 }
 
 /*  Universal  tags */
@@ -140,6 +143,26 @@ p {
 .navbar__menu {
   display: flex;
 }
+
+.about__majors {
+  flex-direction: column;
+}
+.major {
+  margin-bottom: 38px;
+}
+.skillset {
+  flex-direction: column;
+}
+.project {
+  /* 화면을 메꿔주고, 화면이 커지면 아이템이 알아서 정렬됨 */
+  flex-grow: 1;
+}
+
+/* ?? 왜인지 먹히지않음 */
+.testimonial__avatar{
+  width: 80px;
+}
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
@@ -158,6 +181,21 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+}
+
+/* navbar toggle button */
+/* 
+1. html에 토글버튼만듬
+2. css에 토글버튼 코딩 + display:none...숨김 (화면크기 작아지면 보이게)
+3. 미디어쿼리에서 화면크기에 작아지면 display:block...보임
+ */
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
 }
 
 /* home*/
@@ -202,7 +240,7 @@ p {
 }
 
 .section__container {
-  /* 특정 너비에서 줄바꿈 되게 max-width 설정 */
+  /* 특정 너비에서 줄바꿈 되고, 양옆으로 너무 늘어나지않게 max-width 설정 */
   max-width: 1200px;
   /* 가운데 정렬 */
   margin: auto;
@@ -249,6 +287,8 @@ p {
 .major__description {
   font-size: var(--font-small);
 }
+
+/* about__jobs */
 
 .job {
   display: flex;
@@ -464,4 +504,49 @@ img 상위컨테이너의 크기를 정하고
 
 .testimonial__speech-bubble a {
   color: var(--color-orange);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-orange);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+  transition: all var(--animation_1s_duration) ease-in;
+}
+
+.contact__links i:hover {
+  transform: scale(1.5);
+  color: var(--color-blue);
+}
+
+/* for below 768px screen width */
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    /* Quest: navbar메뉴자체의 width가 작아서 중앙으로 안옴 - width 100%설정 */
+    text-align: center;
+    width: 100%;
+    /* JS : 메뉴 숨기고, 클릭하면 보이게 */
+    display: none;
+  }
 }
