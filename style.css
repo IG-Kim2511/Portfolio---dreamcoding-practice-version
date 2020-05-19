@@ -396,15 +396,19 @@ img 상위컨테이너의 크기를 정하고
   height: 100%;
   top: 0;
   left: 0;
-  /* hover할때 글자보이게 하기 1 */
+  /* hover할때 글자보이게 하기 1
+  글자가 밑에서 원래위치로 스르륵 올라오게
+  */
   opacity: 0;
+
+  transform: translateY(10px);
   transition: all var(--animation_duration) ease-in;
 }
 /* hover할때 글자보이게 하기 2 */
-.project:hover .project__description{
+.project:hover .project__description {
   opacity: 0.8;
+  transform: translateY(0px);
 }
-
 
 .project__description h3 {
   color: var(--color-white);
