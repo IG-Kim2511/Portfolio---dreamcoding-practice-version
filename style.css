@@ -189,6 +189,10 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.home__contact:hover {
+  background-color: var(--color-blue);
+}
+
 /* Section common */
 .section {
   padding: 50px;
@@ -310,4 +314,111 @@ p {
 .tools,
 .etc {
   padding: 20px;
+}
+/* Work */
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-blue);
+  color: var(--color-strong-orange);
+}
+/*퀘스트: 위쪽에 position시키고, 숨긴후, 클릭하면 보이면서 + 밑으로 내려오게 하기  */
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-grey);
+  width: 24px;
+  height: 24px;
+  /* text vertical 중앙으로  */
+  line-height: 24px;
+  /* span의 좁은 블럭 설정 바꾸기 */
+  display: inline-block;
+  /*퀘스트: 위쪽에 position시키고, 숨긴후, 클릭하면 보이면서 + 밑으로 내려오게 하기  */
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation_duration) ease-in;
+}
+.work__projects {
+  display: flex;
+  /* 아이템 꽉차면 줄바꿈 */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* 퀘스트 : img 크기 일정하게 하기 1
+img 상위컨테이너의 크기를 정하고
+*/
+.project {
+  /* .project__description position 이 컨테이너 안으로 잡기*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  /* 팁: 임시로 배경색 넣고 확인하며 작업하기 */
+  background-color: var(--color-white);
+}
+
+/* 퀘스트 : img 크기 일정하게 하기 2 
+ img가 담겨있는 컨테이너 크기를 못넘기게함 */
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* 퀘스트: hover할때 글자가 화면중앙에 보이게하기 */
+.project__description {
+  position: absolute;
+  background-color: black;
+  /* vertical center align */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* hover할때 글자보이게 하기 1 */
+  opacity: 0;
+  transition: all var(--animation_duration) ease-in;
+}
+/* hover할때 글자보이게 하기 2 */
+.project:hover .project__description{
+  opacity: 0.8;
+}
+
+
+.project__description h3 {
+  color: var(--color-white);
+}
+
+/* after: h3다음에 ' '을 추가함 */
+.project__description h3:after {
+  content: " ";
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
 }
