@@ -144,22 +144,19 @@ p {
   display: flex;
 }
 
-.about__majors {
-  flex-direction: column;
-}
+/*  */
+
 .major {
   margin-bottom: 38px;
 }
-.skillset {
-  flex-direction: column;
-}
+
 .project {
   /* 화면을 메꿔주고, 화면이 커지면 아이템이 알아서 정렬됨 */
   flex-grow: 1;
 }
 
 /* ?? 왜인지 먹히지않음 */
-.testimonial__avatar{
+.testimonial__avatar {
   width: 80px;
 }
 
@@ -548,5 +545,11 @@ img 상위컨테이너의 크기를 정하고
     width: 100%;
     /* JS : 메뉴 숨기고, 클릭하면 보이게 */
     display: none;
+  }
+  .about__majors {
+    flex-direction: column;
+  }
+  .skillset {
+    flex-direction: column;
   }
 }
