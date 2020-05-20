@@ -132,12 +132,27 @@ p {
 
 /* Navbar */
 #navbar {
+  /* JS */
+  /* Navbar를 home위에 올림 */
+  position: fixed;
+  /* 너비가 좁아서 왼쪽에 몰려있는 문제 해결 */
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-orange);
+  /* background-color: var(--color-orange); */
+  /* JS  */
+  background-color: transparent;
   align-items: center;
-  color: var(--color-white);
+  color: var(--color-black);
   padding: 16px;
+  /* js 천천히 변하게 하기 */
+  transition: all var(--animation_1s_duration) ease-in-out;
+}
+
+/* JS 스크롤하면 클래스 추가 */
+#navbar.navbar--dark {
+  background-color: var(--color-dark-white);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -168,7 +183,7 @@ p {
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-black);
 }
 
 .navbar__menu__item:hover {
@@ -198,6 +213,7 @@ p {
 /* home*/
 #home {
   padding: 40px;
+  padding-top: 120px;
   /* 가운데 정렬 */
   text-align: center;
   /* center no-repeat : 반응형 효과 */
