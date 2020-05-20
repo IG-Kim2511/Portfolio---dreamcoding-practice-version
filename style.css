@@ -147,6 +147,7 @@ p {
   padding: 16px;
   /* js 천천히 변하게 하기 */
   transition: all var(--animation_1s_duration) ease-in-out;
+  z-index: 1;
 }
 
 /* JS 스크롤하면 클래스 추가 */

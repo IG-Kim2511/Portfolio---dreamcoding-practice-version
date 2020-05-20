@@ -24,3 +24,22 @@ document.addEventListener("scroll", () => {
     navbar.classList.remove("navbar--dark");
   }
 });
+
+//Handle scrolling when tapping on the navbar menu
+
+const navbarMenu = document.querySelector(".navbar__menu");
+// 클릭이 되는 evetn. 클릭할때 타겟이 되는 이벤트
+navbarMenu.addEventListener("click", (event) => {
+  console.log(event.target);
+
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  console.log(event.target.dataset.link);
+
+  // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+});
