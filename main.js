@@ -113,8 +113,14 @@ const projects = document.querySelectorAll(".project");
 // dataset안에 있는
 // filter값 프린트하기
 workBtnContainer.addEventListener("click", (e) => {
-  // debugging하기 : breakpoint :코드넘버 누르면 breakpoint생김
-  // source-page-main.js - ( scope- e ) - watch - e.target- e.target.parentNode- e.target.parentNode.dataset.filter 검색해보기
+  //   <디버깅 debugging>
+  // : breakpoint :코드넘버 누르면 breakpoint생김
+  //   source-page-main.js
+  // - scope- e클릭..읽어보기
+  // - watch
+  // - e.target
+  // - e.target.parentNode
+  // - e.target.parentNode.dataset.filter 검색해보기
 
   // 3. button, span 의 data  가져오기
   // dataset: html 의 data 가져오는 코드
