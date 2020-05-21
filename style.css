@@ -431,6 +431,11 @@ img 상위컨테이너의 크기를 정하고
   background-color: var(--color-white);
 }
 
+/* JS */
+.project.invisible {
+  display: none;
+}
+
 /* 퀘스트 : img 크기 일정하게 하기 2 
  img가 담겨있는 컨테이너 크기를 못넘기게함 */
 .project__img {
