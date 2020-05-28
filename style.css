@@ -154,7 +154,7 @@ p {
 /* JS 스크롤하면 클래스 추가 */
 #navbar.navbar--dark {
   background-color: var(--color-dark-white);
-  padding: 8px;
+  padding: 16px;
 }
 
 .navbar__menu {
@@ -598,6 +598,7 @@ img 상위컨테이너의 크기를 정하고
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-grey);
   }
   .navbar__menu {
     flex-direction: column;
@@ -607,6 +608,12 @@ img 상위컨테이너의 크기를 정하고
     /* JS : 메뉴 숨기고, 클릭하면 보이게 */
     display: none;
   }
+
+  /* (74)JS */
+  .navbar__menu.open {
+    display: block;
+  }
+
   .about__majors {
     flex-direction: column;
   }
