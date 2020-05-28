@@ -13,8 +13,7 @@ document.addEventListener("scroll", () => {
 
   //   1. window.scroll y값이 navbarHeight보다 크면,
   // 'navbar--dark'클래스를 추가함
-  // (
-  // 작으면, 제거함)
+  // ( 작으면, 제거함)
 
   // 2. css에 'navbar--dark'를 스타일링함
 
@@ -47,7 +46,7 @@ navbarMenu.addEventListener("click", (event) => {
 
 // Handle click on 'contact me' button on  home
 //메뉴버튼 클릭하면 해당 섹션으로 이동
-//따로 function scrollIntoView로 빼서도 가능.
+//중첩되는 function scrollIntoView...따로 빼서도 가능.그리고 다른 함수에서 사용 하게
 
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", () => {
@@ -129,6 +128,13 @@ workBtnContainer.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
+
+  // mywork 화면전환 애니메이션 &  300ms 후 초기화
+  projectContainer.classList.add("anim-out");
+
+  setTimeout(() => {
+    projectContainer.classList.remove("anim-out");
+  }, 300);
 
   // 4. forEach로 dataset목록 다 돌리고, 해당되는 아이템만 보이게하기
   projects.forEach((project) => {
