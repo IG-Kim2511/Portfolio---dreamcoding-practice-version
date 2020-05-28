@@ -1,3 +1,4 @@
+/* (36) */
 /* Global */
 
 :root {
@@ -130,7 +131,7 @@ p {
   width: 32px;
 }
 
-/* Navbar */
+/* (38) Navbar */
 #navbar {
   /* JS */
   /* Navbar를 home위에 올림 */
@@ -181,13 +182,16 @@ p {
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
+  border: 1px solid transparent;
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-black);
-}
+/* (72)
+.navbar__menu__item.active {} 
+*/
 
 .navbar__menu__item:hover {
+  border-color: var(--color);
+
   background-color: var(--color-blue);
 }
 
@@ -380,13 +384,14 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
-.category__btn.active,
+/* JS. (72) */
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-blue);
   color: var(--color-strong-orange);
 }
 /*퀘스트: 위쪽에 position시키고, 숨긴후, 클릭하면 보이면서 + 밑으로 내려오게 하기  */
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -414,10 +419,12 @@ p {
   /* 아이템 꽉차면 줄바꿈 */
   flex-wrap: wrap;
   justify-content: center;
+  /* (70)JS */
   opacity: 1;
   transition: all var(--animation_1s_duration) ease-in;
 }
 
+/* (70)JS */
 .work__projects.anim-out {
   opacity: 0.6;
   transform: scale(0.9) translateY(40px);

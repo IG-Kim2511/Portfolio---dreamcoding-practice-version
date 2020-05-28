@@ -1,6 +1,6 @@
 "use strict";
 
-//  Make navbar transparent when it is on the top
+// (58) Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 // JS에서 height 잡아내기
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -128,15 +128,24 @@ workBtnContainer.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
+  // (72) 현재 클릭된곳으로 버튼효과 옮겨가기
+  //  Remove selection from the previous item and select the next selection
 
-  // mywork 화면전환 애니메이션 &  300ms 후 초기화
+  const active = document.querySelector(".category__btn.selected");
+  if (active != null) {
+    active.classList.remove("selected");
+  }
+
+  e.target.classList.add("selected");
+
+  // (70) project 화면전환 애니메이션 &  300ms 후 초기화
   projectContainer.classList.add("anim-out");
 
   setTimeout(() => {
     projectContainer.classList.remove("anim-out");
   }, 300);
 
-  // 4. forEach로 dataset목록 다 돌리고, 해당되는 아이템만 보이게하기
+  // (68) 4.forEach로 dataset목록 다 돌리고, 해당되는 아이템만 보이게하기
   projects.forEach((project) => {
     console.log(project.dataset.type);
     if (filter === "*" || filter === project.dataset.type) {
