@@ -153,7 +153,7 @@ p {
 
 /* JS 스크롤하면 클래스 추가 */
 #navbar.navbar--dark {
-  background-color: var(--color-dark-white);
+  background-color: var(--color-light-white);
   padding: 16px;
 }
 
@@ -573,7 +573,7 @@ img 상위컨테이너의 크기를 정하고
   height: 70px;
   font-size: 50px;
   color: var(--color-orange);
-  background-color: var(--color-white);
+  background-color: var(--color-blue);
   border-radius: 50%;
   /* display:none으로 하면 transition효과가 안먹힘. */
   opacity: 0;
@@ -589,16 +589,32 @@ img 상위컨테이너의 크기를 정하고
   pointer-events: auto;
 }
 
-/* for below 768px screen width */
+/* (54~56)(78~80)  for below 768px screen width */
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+
+    --font-large: 30px;
+
+    --font-medium: 18px;
+
+    --font-regular: 16px;
+
+    --font-small: 14px;
+
+    --font-micro: 12px;
+  }
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-grey);
+    background-color: var(--color-light-white);
   }
   .navbar__menu {
     flex-direction: column;
@@ -616,8 +632,43 @@ img 상위컨테이너의 크기를 정하고
 
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .major {
+    margin-bottom: 30px;
   }
   .skillset {
     flex-direction: column;
+  }
+
+  .category__btn {
+    padding: 8px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial__avatar {
+    width: 80px;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__speech-bubble {
+    order: 1;
+  }
+  .arrow-up {
+    bottom: 16px;
+    right: 16px;
+
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
   }
 }
