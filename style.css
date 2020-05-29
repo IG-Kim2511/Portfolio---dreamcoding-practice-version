@@ -1,4 +1,4 @@
-/* (36) */
+/* (c36) */
 /* Global */
 
 :root {
@@ -186,7 +186,7 @@ p {
 }
 
 /* (72)
-.navbar__menu__item.active {} 
+.navbar__menu__item.active {}
 */
 
 .navbar__menu__item:hover {
@@ -201,7 +201,7 @@ p {
 }
 
 /* navbar toggle button */
-/* 
+/*
 1. html에 토글버튼만듬
 2. css에 토글버튼 코딩 + display:none...숨김 (화면크기 작아지면 보이게)
 3. 미디어쿼리에서 화면크기에 작아지면 display:block...보임
@@ -451,7 +451,7 @@ img 상위컨테이너의 크기를 정하고
   display: none;
 }
 
-/* 퀘스트 : img 크기 일정하게 하기 2 
+/* 퀘스트 : img 크기 일정하게 하기 2
  img가 담겨있는 컨테이너 크기를 못넘기게함 */
 .project__img {
   max-width: 100%;

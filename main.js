@@ -1,6 +1,6 @@
 "use strict";
-
-// (58) Make navbar transparent when it is on the top
+// c58
+// Make navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 // JS에서 height 잡아내기
 const navbarHeight = navbar.getBoundingClientRect().height;
