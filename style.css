@@ -650,6 +650,7 @@ img 상위컨테이너의 크기를 정하고
 
   .category__btn {
     padding: 8px;
+    width: 100%;
   }
 
   .testimonial {
