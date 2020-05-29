@@ -1,2 +1,2 @@
 # Portfolio
- Ian Kim's portfolio
+ Ian Kim's portfolio- practice version
