@@ -252,6 +252,7 @@ p {
 /* Section common */
 .section {
   padding: 50px;
+  padding-top: 80px;
   text-align: center;
 
   margin: auto;
@@ -628,6 +629,11 @@ img 상위컨테이너의 크기를 정하고
   /* (74)JS */
   .navbar__menu.open {
     display: block;
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
   }
 
   .about__majors {
