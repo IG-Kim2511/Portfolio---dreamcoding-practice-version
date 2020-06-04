@@ -254,7 +254,7 @@ p {
   padding: 50px;
   padding-top: 80px;
   text-align: center;
-
+  /* auto는 가로 중앙에 배치한다는 뜻이다. 그리고 자연스럽게 좌우 여백은 균등하게 배분됨 */
   margin: auto;
 }
 
@@ -275,6 +275,7 @@ p {
 .major__icon {
   width: 170px;
   height: 170px;
+  /* line-height...height와 같은 높이로 지정하면, 폰트가 수직정렬됨 */
   line-height: 170px;
   font-size: 70px;
   margin: auto;
@@ -300,7 +301,7 @@ p {
 } */
 
 .major__title,
-. .major__description {
+.major__description {
   color: var(--color-dark-grey);
 }
 .major__description {
@@ -327,6 +328,7 @@ p {
 .job--period {
   font-size: var(--font-micro);
 }
+
 /* Skill */
 #skills {
   background-color: var(--color-yellow);
