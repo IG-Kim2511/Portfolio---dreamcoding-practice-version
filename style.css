@@ -190,7 +190,7 @@ p {
 */
 
 .navbar__menu__item:hover {
-  border-color: var(--color);
+  border-color: var(--color-white);
 
   background-color: var(--color-blue);
 }
