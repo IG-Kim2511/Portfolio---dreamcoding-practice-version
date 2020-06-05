@@ -1,22 +1,23 @@
 "use strict";
 // c58
 // Make navbar transparent when it is on the top
-const navbar = document.querySelector("#navbar");
 // JS에서 height 잡아내기
+// scroll 될때마다 function호출하기
+// scroll할때마다 scrollY값 가져옴
+//   console.log(window.scrollY);
+//   console.log(`navbarHeight: ${navbarHeight}`);
+
+//   1. window.scroll y값이 navbarHeight보다 크면,
+// 'navbar--dark'클래스를 추가함
+// ( 작으면, 제거함)
+
+// 2. css에 'navbar--dark'를 스타일링함
+
+const navbar = document.querySelector("#navbar");
+
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-// scroll 될때마다 function호출하기
 document.addEventListener("scroll", () => {
-  // scroll할때마다 scrollY값 가져옴
-  //   console.log(window.scrollY);
-  //   console.log(`navbarHeight: ${navbarHeight}`);
-
-  //   1. window.scroll y값이 navbarHeight보다 크면,
-  // 'navbar--dark'클래스를 추가함
-  // ( 작으면, 제거함)
-
-  // 2. css에 'navbar--dark'를 스타일링함
-
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
   } else {
@@ -24,11 +25,11 @@ document.addEventListener("scroll", () => {
   }
 });
 
-//Handle scrolling when tapping on the navbar menu
+//c60. Handle scrolling when tapping on the navbar menu
 //메뉴버튼 클릭하면 해당 섹션으로 이동
+// 클릭이 되는 event. 클릭할때 타겟이 되는 이벤트
 
 const navbarMenu = document.querySelector(".navbar__menu");
-// 클릭이 되는 evetn. 클릭할때 타겟이 되는 이벤트
 navbarMenu.addEventListener("click", (event) => {
   console.log(event.target);
 
@@ -37,12 +38,13 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  // dataset.link
   console.log(event.target.dataset.link);
 
   // (74)
   navbarMenu.classList.remove("open");
 
-  // mdn scrollIntoView
+  // scrollIntoView
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 });
@@ -56,6 +58,7 @@ navbarToggleBtn.addEventListener("click", () => {
 
 // Handle click on 'contact me' button on  home
 //메뉴버튼 클릭하면 해당 섹션으로 이동
+// selector : 임의로 지은 parameter
 //중첩되는 function scrollIntoView...따로 빼서도 가능.그리고 다른 함수에서 사용 하게
 
 const homeContactBtn = document.querySelector(".home__contact");

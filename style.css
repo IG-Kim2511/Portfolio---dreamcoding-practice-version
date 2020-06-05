@@ -419,7 +419,7 @@ p {
 }
 .work__projects {
   display: flex;
-  /* 아이템 꽉차면 줄바꿈 */
+  /* ???!!! 아이템 꽉차면 줄바꿈 */
   flex-wrap: wrap;
   justify-content: center;
   /* (70)JS */
@@ -490,7 +490,12 @@ img 상위컨테이너의 크기를 정하고
   color: var(--color-white);
 }
 
-/* after: h3다음에 ' '을 추가함 */
+/*???!!!
+ after:~~ : ~~ 다음에 ' '을 추가함
+https://developer.mozilla.org/ko/docs/Web/CSS/::after
+
+before:~~  : ~~ 이전에 " " 추가
+*/
 .project__description h3:after {
   content: " ";
   display: block;
