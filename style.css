@@ -249,6 +249,7 @@ p {
 /* About */
 .about__majors {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 80px 0;
 }
@@ -367,18 +368,6 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
-/* JS. (72) */
-.category__btn.selected,
-.category__btn:hover {
-  background-color: var(--color-orange);
-  color: var(--color-strong-orange);
-}
-/*퀘스트: 위쪽에 position시키고, 숨긴후, 클릭하면 보이면서 + 밑으로 내려오게 하기  */
-.category__btn.selected .category__count,
-.category__btn:hover .category__count {
-  opacity: 1;
-  top: 0;
-}
 
 .category__count {
   background-color: var(--color-blue);
@@ -397,6 +386,19 @@ p {
   opacity: 0;
   transition: all var(--animation_duration) ease-in;
 }
+/*퀘스트: 위쪽에 position시키고, 숨긴후, 클릭하면 보이면서 + 밑으로 내려오게 하기  */
+.category__btn.selected .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+/* JS. (72) */
+.category__btn.selected,
+.category__btn:hover {
+  background-color: var(--color-orange);
+  color: var(--color-strong-orange);
+}
+
 .work__projects {
   display: flex;
   /* ???!!! 아이템 꽉차면 줄바꿈 */
