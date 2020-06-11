@@ -14,7 +14,7 @@
 
   --color-dark-pink: #ff6863;
 
-  --color-black: #4d4d4d;
+  --color-black: #000000;
 
   --color-dark-grey: #4d4d4d;
 
@@ -33,8 +33,6 @@
   --color-mint: #2ec4b6;
 
   --color-light-mint: #cbf3f0;
-
-  --color-black: #000000;
 
   /* Font size */
 
@@ -57,6 +55,7 @@
   --weight-regular: 400;
 
   /* Size */
+  /* 4px가 가장 대중적임 */
   --size-border-radius: 4px;
 
   /* Animation */
@@ -123,35 +122,31 @@ p {
 
 /* logo img..내 개인적인 설정 */
 
-#home .home__avatar {
-  width: 55%;
-}
-
 .job .job__logo {
   width: 32px;
 }
 
 /* (38) Navbar */
 #navbar {
-  /* JS */
-  /* Navbar를 home위에 올림 */
+  /* js58 */
+  /*c58. Navbar를 home위에 올림 */
   position: fixed;
-  /* 너비가 좁아서 왼쪽에 몰려있는 문제 해결 */
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  /* 너비가 좁아서 왼쪽에 몰려있는 문제 해결 */
+  width: 100%;
   /* background-color: var(--color-orange); */
-  /* JS  */
+  /* js58  */
   background-color: transparent;
   align-items: center;
   color: var(--color-black);
   padding: 16px;
-  /* js 천천히 변하게 하기 */
+  /* js58 천천히 변하게 하기 */
   transition: all var(--animation_1s_duration) ease-in-out;
   z-index: 1;
 }
 
-/* JS 스크롤하면 클래스 추가 */
+/* js58 스크롤하면 클래스 추가 */
 #navbar.navbar--dark {
   background-color: var(--color-orange);
   padding: 16px;
@@ -159,22 +154,6 @@ p {
 
 .navbar__menu {
   display: flex;
-}
-
-/*  */
-
-.major {
-  margin-bottom: 38px;
-}
-
-.project {
-  /* 화면을 메꿔주고, 화면이 커지면 아이템이 알아서 정렬됨 */
-  flex-grow: 1;
-}
-
-/* ?? 왜인지 먹히지않음 */
-.testimonial__avatar {
-  width: 80px;
 }
 
 .navbar__menu__item {
@@ -226,7 +205,8 @@ p {
 }
 
 .home__avatar {
-  width: 250px;
+  width: 55%;
+
   border-radius: 50%;
   border: 2px solid var(--color-black);
 }
@@ -236,32 +216,33 @@ p {
   color: var(--color-black);
 }
 .home__contact {
+  border: 2px solid var(--color-black);
+  border-radius: var(--size-border-radius);
   color: var(--color-black);
   font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-black);
-  border-radius: var(--size-border-radius);
 }
 
 .home__contact:hover {
   background-color: var(--color-blue);
 }
 
-/* Section common */
+/* Section (class:section) */
 .section {
+  /*??!! auto는 가로 중앙에 배치한다는 뜻이다. 그리고 자연스럽게 좌우 여백은 균등하게 배분됨 */
+  margin: auto;
+  /* ??!! */
+  text-align: center;
   padding: 50px;
   padding-top: 80px;
-  text-align: center;
-  /* auto는 가로 중앙에 배치한다는 뜻이다. 그리고 자연스럽게 좌우 여백은 균등하게 배분됨 */
-  margin: auto;
 }
 
 .section__container {
-  /* 특정 너비에서 줄바꿈 되고, 양옆으로 너무 늘어나지않게 max-width 설정 */
+  /* ??!! 특정 너비에서 줄바꿈 되고, 양옆으로 너무 늘어나지않게 max-width 설정 */
   max-width: 1200px;
-  /* 가운데 정렬 */
+  /* ??!! 가운데 정렬 */
   margin: auto;
 }
 
@@ -272,22 +253,21 @@ p {
   margin: 80px 0;
 }
 
-.major__icon {
-  width: 170px;
-  height: 170px;
-  /* line-height...height와 같은 높이로 지정하면, 폰트가 수직정렬됨 */
-  line-height: 170px;
-  font-size: 70px;
-  margin: auto;
-  color: var(--color-blue);
-  border: 1px solid var(--color-blue);
-  border-radius: 50%;
-  margin-bottom: 16px;
+.major {
+  margin-bottom: 38px;
 }
 
-/* animation */
-.major__icon i {
-  transition: all var(--animation_duration);
+.major__icon {
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  color: var(--color-blue);
+  font-size: 70px;
+  /* line-height...height와 같은 높이로 지정하면, 폰트가 수직정렬됨 */
+  line-height: 170px;
+  margin: auto;
+  margin-bottom: 16px;
+  width: 170px;
+  height: 170px;
 }
 
 /* 원에 hover하면 아이콘에만 적용됨 */
@@ -295,10 +275,10 @@ p {
   color: var(--color-orange);
   transform: rotate(-30deg) scale(1.1);
 }
-/* .major__icon:hover {
-  color: var(--color-orange);
-  transform: rotate(-30deg) scale(1.1);
-} */
+/* animation */
+.major__icon i {
+  transition: all var(--animation_duration);
+}
 
 .major__title,
 .major__description {
@@ -334,14 +314,14 @@ p {
   background-color: var(--color-yellow);
 }
 .skillset {
-  display: flex;
   background-color: var(--color-light-white);
+  display: flex;
   margin: 20px 0;
 }
-/* 총너비에 margin없이 100%임. 각 div너비가 작은것이니 각 div에 flex-basis넣음 */
+/* ??!! 총너비에 margin없이 100%임. 각 div너비가 작은것이니 각 div에 flex-basis넣음 */
 .skillset__left {
-  flex-basis: 60%;
   background-color: var(--color-orange);
+  flex-basis: 60%;
   padding: 20px 40px;
 }
 .skillset__right {
@@ -408,7 +388,7 @@ p {
   height: 24px;
   /* text vertical 중앙으로  */
   line-height: 24px;
-  /* span의 좁은 블럭 설정 바꾸기 */
+  /* ??!! span의 좁은 블럭 설정 바꾸기 */
   display: inline-block;
   /*퀘스트: 위쪽에 position시키고, 숨긴후, 클릭하면 보이면서 + 밑으로 내려오게 하기  */
   position: relative;
@@ -425,6 +405,11 @@ p {
   /* (70)JS */
   opacity: 1;
   transition: all var(--animation_1s_duration) ease-in;
+}
+
+.project {
+  /* 화면을 메꿔주고, 화면이 커지면 아이템이 알아서 정렬됨 */
+  flex-grow: 1;
 }
 
 /* (70)JS */
@@ -523,9 +508,10 @@ before:~~  : ~~ 이전에 " " 추가
 }
 
 .testimonial__avatar {
-  width: 150px;
+  width: 80px;
   border-radius: 50%;
 }
+
 .testimonial__avatar:nth-child(odd) {
   margin-right: 40px;
 }

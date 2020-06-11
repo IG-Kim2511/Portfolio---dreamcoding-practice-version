@@ -1,5 +1,5 @@
 "use strict";
-// c58
+// c58 (js58)
 // Make navbar transparent when it is on the top
 // JS에서 height 잡아내기
 // scroll 될때마다 function호출하기
