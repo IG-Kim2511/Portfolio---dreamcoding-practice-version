@@ -153,6 +153,8 @@ p {
 }
 
 .navbar__menu {
+  /* 팁: 임시로 배경색 넣고 확인하며 작업하기 */
+  /* background-color: green; */
   display: flex;
 }
 
@@ -409,35 +411,31 @@ p {
   transition: all var(--animation_1s_duration) ease-in;
 }
 
-.project {
-  /* 화면을 메꿔주고, 화면이 커지면 아이템이 알아서 정렬됨 */
-  flex-grow: 1;
-}
-
 /* (70)JS */
 .work__projects.anim-out {
   opacity: 0.6;
   transform: scale(0.9) translateY(40px);
 }
+
 /* 퀘스트 : img 크기 일정하게 하기 1
 img 상위컨테이너의 크기를 정하고
 */
 .project {
+  background-color: var(--color-white);
+
   /* .project__description position 이 컨테이너 안으로 잡기*/
   position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 280px;
   height: 250px;
   margin: 2px;
-  /* 팁: 임시로 배경색 넣고 확인하며 작업하기 */
-  background-color: var(--color-white);
-}
 
-/* JS */
-.project.invisible {
-  display: none;
+  /* 화면을 메꿔주고, 화면이 커지면 아이템이 알아서 정렬됨 */
+  flex-grow: 1;
 }
 
 /* 퀘스트 : img 크기 일정하게 하기 2
@@ -445,6 +443,11 @@ img 상위컨테이너의 크기를 정하고
 .project__img {
   max-width: 100%;
   max-height: 100%;
+}
+
+/* JS */
+.project.invisible {
+  display: none;
 }
 
 /* 퀘스트: hover할때 글자가 화면중앙에 보이게하기 */
