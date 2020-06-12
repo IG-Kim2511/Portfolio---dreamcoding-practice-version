@@ -561,12 +561,12 @@ before:~~  : ~~ 이전에 " " 추가
 .contact__links {
   font-size: var(--font-large);
   margin: 24px 0;
-  transition: all var(--animation_1s_duration) ease-in;
 }
 
 .contact__links i:hover {
-  transform: scale(1.5);
   color: var(--color-blue);
+  transform: scale(1.5);
+  transition: all var(--animation_duration) ease-in;
 }
 
 /* Scroll arrow up*/
@@ -617,13 +617,14 @@ before:~~  : ~~ 이전에 " " 추가
     font-size: var(--font-medium);
   }
   #navbar {
+    background-color: var(--color-orange);
+
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-orange);
   }
   .navbar__menu {
     flex-direction: column;
-    /* Quest: navbar메뉴자체의 width가 작아서 중앙으로 안옴 - width 100%설정 */
+    /* B: navbar메뉴자체의 width가 작아서 중앙으로 안옴 - width 100%설정 */
     text-align: center;
     width: 100%;
     /* JS : 메뉴 숨기고, 클릭하면 보이게 */
