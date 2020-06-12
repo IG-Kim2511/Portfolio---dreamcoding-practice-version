@@ -423,7 +423,7 @@ img 상위컨테이너의 크기를 정하고
 .project {
   background-color: var(--color-white);
 
-  /* .project__description position 이 컨테이너 안으로 잡기*/
+  /* -=-.project__description 연결*/
   position: relative;
 
   display: flex;
@@ -445,23 +445,26 @@ img 상위컨테이너의 크기를 정하고
   max-height: 100%;
 }
 
-/* JS */
+/* JS.68 */
 .project.invisible {
   display: none;
 }
 
 /* 퀘스트: hover할때 글자가 화면중앙에 보이게하기 */
 .project__description {
+  /*().project에 position:relateve; 넣어서 .project안에서 absolute */
   position: absolute;
-  background-color: black;
+  top: 0;
+  left: 0;
+
+  background-color: var(--color-black);
   /* vertical center align */
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+
   /* hover할때 글자보이게 하기 1
   글자가 밑에서 원래위치로 스르륵 올라오게
   */
@@ -476,7 +479,8 @@ img 상위컨테이너의 크기를 정하고
   transform: translateY(0px);
 }
 
-.project__description h3 {
+.project__description h3,
+.project__description span {
   color: var(--color-white);
 }
 
