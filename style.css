@@ -452,7 +452,8 @@ img 상위컨테이너의 크기를 정하고
 
 /* 퀘스트: hover할때 글자가 화면중앙에 보이게하기 */
 .project__description {
-  /*().project에 position:relateve; 넣어서 .project안에서 absolute */
+  /*().project에 position:relateve; 넣어서 .project안에서 absolute 
+  () :after*/
   position: absolute;
   top: 0;
   left: 0;
@@ -486,20 +487,21 @@ img 상위컨테이너의 크기를 정하고
 
 /*???!!!
  after:~~ : ~~ 다음에 ' '을 추가함
-https://developer.mozilla.org/ko/docs/Web/CSS/::after
-
 before:~~  : ~~ 이전에 " " 추가
 */
 .project__description h3:after {
+  background-color: var(--color-dark-white);
+
   content: " ";
   display: block;
-  position: relative;
-  left: 50%;
   width: 25px;
   height: 2px;
+
+  /* 중앙으로 위치조정 */
+  position: relative;
+  left: 50%;
   margin-left: -12px;
   margin-top: 8px;
-  background-color: var(--color-dark-white);
 }
 /* Testimonial */
 #testimonials {
