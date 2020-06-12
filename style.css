@@ -565,7 +565,7 @@ before:~~  : ~~ 이전에 " " 추가
 
 .contact__links i:hover {
   color: var(--color-blue);
-  transform: scale(1.5);
+  transform: scale(1.3);
   transition: all var(--animation_duration) ease-in;
 }
 
