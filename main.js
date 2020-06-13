@@ -1,6 +1,5 @@
 "use strict";
-// c58 (js58)
-// Make navbar transparent when it is on the top
+// c58 (js58). show navbar with scroll (make navbar transparent when it is on the top)
 // JS에서 height 잡아내기
 // scroll 될때마다 function호출하기
 // scroll할때마다 scrollY값 가져옴
@@ -12,6 +11,9 @@
 // ( 작으면, 제거함)
 
 // 2. css에 'navbar--dark'를 스타일링함
+
+//  <오답노트>
+// ifelse, toggle, scrollY
 
 const navbar = document.querySelector("#navbar");
 
@@ -29,28 +31,34 @@ document.addEventListener("scroll", () => {
 //메뉴버튼 클릭하면 해당 섹션으로 이동
 // 클릭이 되는 event. 클릭할때 타겟이 되는 이벤트
 
+// <오답노트>
+// navbar__menu 가져옴
+// event.target
+// target= event.target;
+// target.dataset.link;
+
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
   console.log(event.target);
+  console.log(event.target.dataset.link);
 
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
-  // dataset.link
-  console.log(event.target.dataset.link);
-
-  // (74)
-  navbarMenu.classList.remove("open");
 
   // scrollIntoView
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+
+  // (74). 모바일에서 scroll할때는 navbar가 닫혀지게..
+  navbarMenu.classList.remove("open");
 });
 
 // (74) Navbar toggle button for small screen
 // menubar클릭하면 menu목록 나오기
+// ??!! toggle
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
@@ -63,6 +71,8 @@ navbarToggleBtn.addEventListener("click", () => {
 
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", () => {
+  // const scrollTo = document.querySelector(selector);
+  // scrollTo.scrollIntoView({ behavior: "smooth" });
   scrollIntoView("#contact");
 });
 
