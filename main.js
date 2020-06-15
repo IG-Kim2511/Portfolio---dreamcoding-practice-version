@@ -30,6 +30,7 @@ document.addEventListener("scroll", () => {
 //c60. Handle scrolling when tapping on the navbar menu
 //메뉴버튼 클릭하면 해당 섹션으로 이동
 // 클릭이 되는 event. 클릭할때 타겟이 되는 이벤트
+// dataset: html 의 data 가져오는 코드
 
 // <오답노트>
 // navbar__menu 가져옴
@@ -89,6 +90,12 @@ function scrollIntoView(selector) {
 // 1 -           (  800  /  800 = 1 )   = 0
 // 1 -           ( 1600 /  800 = 2 )   = -1
 
+// <오답노트>
+// home.getBoundingClientRect().height;
+// const home = document.querySelector("#home");
+// const homeHeight = home.offsetheight;
+//   home.style.opacity = 1 - window.scrollY / homeHeight;
+
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 
@@ -107,7 +114,9 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Handle click  on the 'arrow up' button
+// Handle click  on the 'arrow up' button (arrow버튼누르면 home)
+// <오답노트> scrollIntoView
+
 arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
@@ -117,7 +126,7 @@ function scrollIntoView(selector) {
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
 
-// projects - project list클릭하면, 해당 프로젝트만 뜨게 하기 . html data 사용
+// (68)projects - project list클릭하면, 해당 프로젝트만 뜨게 하기 . html data 사용
 
 // 알고리즘
 // 1. 버튼. 컨테이너 . 프로젝트 가져옴
@@ -125,32 +134,54 @@ function scrollIntoView(selector) {
 // 3. button, span 의 data  가져오기
 // 4. forEach로 dataset목록 다 돌리고, 해당되는 아이템만 보이게하기
 
-const workBtnContainer = document.querySelector(".work__categories");
-const projectContainer = document.querySelector(".work__projects");
-const projects = document.querySelectorAll(".project");
-
+// const filter = e.target.dataset.filter
 // e: event
 // event안에 있는
 // target 안에 있는
 // dataset안에 있는
 // filter값 프린트하기
-workBtnContainer.addEventListener("click", (e) => {
-  //   <디버깅 debugging>
-  // : breakpoint :코드넘버 누르면 breakpoint생김
-  //   source-page-main.js
-  // - scope- e클릭..읽어보기
-  // - watch
-  // - e.target
-  // - e.target.parentNode
-  // - e.target.parentNode.dataset.filter 검색해보기
 
-  // 3. button, span 의 data  가져오기
-  // dataset: html 의 data 가져오는 코드
+//   <디버깅 debugging>
+// : breakpoint :코드넘버 누르면 breakpoint생김
+//   source-page-main.js
+// - scope- e클릭..읽어보기
+// - watch
+// - e.target
+// - e.target.parentNode
+// - e.target.parentNode.dataset.filter 검색해보기
+
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+workBtnContainer.addEventListener("click", (e) => {
+  // (68-1) dataset 가져옴
+
+  // span 클릭되게 하기 : e.target.parentNode.dataset.filter;
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   // 만약을 위해 코드 추가 if...filter가 null이면 return..끝냄
   if (filter == null) {
     return;
   }
+
+  // (68-2)forEach로 dataset목록 다 돌리고, 해당되는 아이템만 보이게하기
+  projects.forEach((project) => {
+    console.log(project.dataset.type);
+
+    if (filter === "*" || filter === project.dataset.type) {
+      project.classList.remove("invisible");
+    } else {
+      project.classList.add("invisible");
+    }
+  });
+
+  // (70) project 화면전환 애니메이션 &  300ms 후 초기화
+  projectContainer.classList.add("anim-out");
+
+  setTimeout(() => {
+    projectContainer.classList.remove("anim-out");
+  }, 300);
+
   // (72) 현재 클릭된곳으로 버튼효과 옮겨가기
   //  Remove selection from the previous item and select the next selection
 
@@ -160,21 +191,4 @@ workBtnContainer.addEventListener("click", (e) => {
   }
 
   e.target.classList.add("selected");
-
-  // (70) project 화면전환 애니메이션 &  300ms 후 초기화
-  projectContainer.classList.add("anim-out");
-
-  setTimeout(() => {
-    projectContainer.classList.remove("anim-out");
-  }, 300);
-
-  // (68) 4.forEach로 dataset목록 다 돌리고, 해당되는 아이템만 보이게하기
-  projects.forEach((project) => {
-    console.log(project.dataset.type);
-    if (filter === "*" || filter === project.dataset.type) {
-      project.classList.remove("invisible");
-    } else {
-      project.classList.add("invisible");
-    }
-  });
 });

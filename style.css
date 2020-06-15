@@ -589,6 +589,8 @@ before:~~  : ~~ 이전에 " " 추가
 
 /* visible클래스가 있을때(스크롤할때만)  보이게 하기*/
 .arrow-up.visible {
+  /* display: block; */
+
   opacity: 1;
   /* 클릭 가능하게 */
   pointer-events: auto;
