@@ -132,7 +132,8 @@ function scrollIntoView(selector) {
 // 1. 버튼. 컨테이너 . 프로젝트 가져옴
 // 2. click, addEventListener
 // 3. button, span 의 data  가져오기
-// 4. forEach로 dataset목록 다 돌리고, 해당되는 아이템만 보이게하기
+// 4. forEach로 dataset목록 다 돌림
+// 5. data-filter = data-type이 같을때 .invisible을 삭제, 다르면 추가함.
 
 // const filter = e.target.dataset.filter
 // e: event
@@ -157,7 +158,9 @@ const projects = document.querySelectorAll(".project");
 workBtnContainer.addEventListener("click", (e) => {
   // (68-1) dataset 가져옴
 
-  // span 클릭되게 하기 : e.target.parentNode.dataset.filter;
+  // span 클릭되게 하기 : e.target.parentNode.dataset.filter; 추가
+  //쉽게하기: const filter = e.target.dataset.filter; 만 넣고 , span은 구석으로 밀어버리기.
+
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   // 만약을 위해 코드 추가 if...filter가 null이면 return..끝냄
   if (filter == null) {
