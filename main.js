@@ -27,8 +27,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
-//c60. Handle scrolling when tapping on the navbar menu
-//메뉴버튼 클릭하면 해당 섹션으로 이동
+//c60. Handle scrolling when tapping on the navbar menu(메뉴버튼 클릭하면 해당 섹션으로 이동)
 // 클릭이 되는 event. 클릭할때 타겟이 되는 이벤트
 // dataset: html 의 data 가져오는 코드
 
@@ -45,6 +44,8 @@ navbarMenu.addEventListener("click", (event) => {
 
   const target = event.target;
   const link = target.dataset.link;
+
+  // navbar__버튼 밖의 menu 클릭했을때  return시킴
   if (link == null) {
     return;
   }
@@ -58,7 +59,7 @@ navbarMenu.addEventListener("click", (event) => {
 });
 
 // (74) Navbar toggle button for small screen
-// menubar클릭하면 menu목록 나오기
+// small screen- menubar클릭하면 menu목록 나오기
 // ??!! toggle
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", () => {
@@ -162,6 +163,7 @@ workBtnContainer.addEventListener("click", (e) => {
   //쉽게하기: const filter = e.target.dataset.filter; 만 넣고 , span은 구석으로 밀어버리기.
 
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+
   // 만약을 위해 코드 추가 if...filter가 null이면 return..끝냄
   if (filter == null) {
     return;
