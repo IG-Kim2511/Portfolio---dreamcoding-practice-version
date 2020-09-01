@@ -38,6 +38,7 @@ document.addEventListener("scroll", () => {
 // target.dataset.link;
 
 const navbarMenu = document.querySelector(".navbar__menu");
+
 navbarMenu.addEventListener("click", (event) => {
   console.log(event.target);
   console.log(event.target.dataset.link);
@@ -62,6 +63,7 @@ navbarMenu.addEventListener("click", (event) => {
 // small screen- menubar클릭하면 menu목록 나오기
 // ??!! toggle
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+
 navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
 });
@@ -72,6 +74,7 @@ navbarToggleBtn.addEventListener("click", () => {
 //중첩되는 function scrollIntoView...따로 빼서도 가능.그리고 다른 함수에서 사용 하게
 
 const homeContactBtn = document.querySelector(".home__contact");
+
 homeContactBtn.addEventListener("click", () => {
   // const scrollTo = document.querySelector(selector);
   // scrollTo.scrollIntoView({ behavior: "smooth" });
@@ -107,6 +110,7 @@ document.addEventListener("scroll", () => {
 // Show "arrow up" button when scrolling down
 // 알고리즘: 스크롤할때 homeheight의 1/2로 내려오면. arroup에 visible 클래스 추가
 const arrowUp = document.querySelector(".arrow-up");
+
 document.addEventListener("scroll", () => {
   if (window.scrollY > homeHeight / 2) {
     arrowUp.classList.add("visible");
